@@ -32,4 +32,4 @@ print(random_word)
 
 ⚡ **Made by**: [NandhaBots](https://github.com/nandhabots)
 
-💬 **Contact**: [NandhaSupport](nandhasupport.t.me)
+💬 **Contact**: [NandhaSupport](https://t.me/nandhasupport)
