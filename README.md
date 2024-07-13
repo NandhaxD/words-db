@@ -4,9 +4,12 @@ This repository contains a database of over 400,000 words with their definitions
 ## Data Format
 The `words.json` file contains a list of objects, each representing a word and its definition. The format is as follows:
 
-```json
+```python
 [
-{'word': 'apple','definition': 'a sweet, juicy fruit'}, ...
+{
+'word': 'apple',
+'definition': 'a sweet, juicy fruit'
+}, ...
 ]
 ```
 
