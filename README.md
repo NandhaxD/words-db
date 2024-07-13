@@ -30,6 +30,6 @@ random_word = random.choice(words)
 print(random_word)
 ```
 
-⚡ *Made by*: [NandhaBots](https://github.com/nandhabots)
+⚡ **Made by**: [NandhaBots](https://github.com/nandhabots)
 
-💬 *Contact*: [NandhaSupport](nandhasupport.t.me)
+💬 **Contact**: [NandhaSupport](nandhasupport.t.me)
