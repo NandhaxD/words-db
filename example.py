@@ -4,8 +4,11 @@ import random
 
 def get_random_word():
     '''
-    Objective: Get a random word dict from words database
-    output: word dict 
+    Objective: 
+       Get a random word dict 
+       from words database.
+    output: 
+       word dict 
     '''
 
     with open('words.json') as f:
