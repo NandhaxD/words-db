@@ -10,7 +10,9 @@ def get_random_word():
        word dict 
     '''
 
-    with open('./words.json') as f:
+    with open('words_db/words.json') as f:
         words = json.load(f)
     random_word = random.choice(words)
     return random_word
+
+
