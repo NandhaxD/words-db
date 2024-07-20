@@ -3,26 +3,41 @@ function redirectToPlay() {
 }
 
 
+function getRandomWord() {
+  fetch('words.json')
+   .then(response => response.json())
+   .then(words => {
+      var randomWord = words[Math.floor(Math.random() * words.length)];
+      return randomWord;
+    })
+   .then(randomWord => {
+      var wordElement = document.getElementById("random_word");
+         wordElement.textContent = `Guess: ${randomWord.word}`; // Access the 'word' property
+    })
+   .catch(error => console.error("Error:", error));
+}
+
+
 function wordcheck() {
-  const randomWordElement = document.getElementById("random_word");
-  const answerElement = document.getElementById("answer");
-  const heartElement = document.getElementById("hearts");
+  var randomWordElement = document.getElementById("random_word");
+  var answerElement = document.getElementById("answer");
+  var heartElement = document.getElementById("hearts");
 
   if (!randomWordElement || !answerElement || !heartElement) {
-    console.error("Missing HTML elements");
-    return;
+      console.error("Missing HTML elements");
+      return;
   }
 
-  const word = randomWordElement.textContent.split(":")[1].trim();
-  const answer = answerElement.value.trim();
-  const heartMatch = heartElement.textContent.split(":")[1].trim().match(/❤️/g);
+  var word = randomWordElement.textContent.split(":")[1].trim();
+  var answer = answerElement.value.trim();
+  var heartMatch = heartElement.textContent.split(":")[1].trim().match(/❤️/g);
   let heartsCount = heartMatch ? heartMatch.length : 0;
 
   if ( word.toLowerCase() == answer.toLowerCase() ) {
       alert("You guessed the word! Congratulations!");
       getRandomWord();
   } else {
-    if (heartsCount == 0) {
+    if (heartsCount <= 0) {
       alert("You lost the game 😂");
       window.location.href = "play.html";
       
@@ -40,16 +55,3 @@ function wordcheck() {
 
 
 
-function getRandomWord() {
-  fetch('words.json')
-   .then(response => response.json())
-   .then(words => {
-      const randomWord = words[Math.floor(Math.random() * words.length)];
-      return randomWord;
-    })
-   .then(randomWord => {
-      const wordElement = document.getElementById("random_word");
-      wordElement.textContent = `Guess: ${randomWord.word}`; // Access the 'word' property
-    })
-   .catch(error => console.error("Error:", error));
-}
