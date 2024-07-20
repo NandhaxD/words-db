@@ -65,19 +65,21 @@
     .start-game {
       text-align: center;
       margin-bottom: 40px;
-    }
-    .start-game button {
-      font-family: Times new roman, serif;
-      background-color: #4CAF50;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-    .start-game button:hover {
+    }.start-game button {
+       font-family: Times new roman, serif;
+       background-color: #4CAF50;
+       color: #fff;
+       padding: 20px 40px; /* increased padding */
+       font-size: 10px; /* increased font size */
+       width: 200px; /* set width */
+       height: 50px; /* set height */
+       border: none;
+       border-radius: 10px;
+       cursor: pointer;
+      } .start-game button:hover {
       background-color: #3e8e41;
     }
+    
   </style>
 </head>
 
@@ -106,7 +108,7 @@
       </ul>
     </div>
     <div class="start-game">
-      <button onclick="redirectToPlay()">Are You Ready to Play?</button>  
+      <button onclick="redirectToPlay()"><b>Are You Ready to Play?</b></button>  
       <p>Let's get started!</p>
     </div>
   </div>
