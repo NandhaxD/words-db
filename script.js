@@ -21,7 +21,7 @@ function wordcheck() {
   if (word.toLowerCase() === answer.toLowerCase()) {
       alert("You guessed the word! Congratulations!");
   } else {
-    if (heartsCount === 0) {
+    if (heartsCount == 0) {
       alert("You lost the game 😂");
       window.location.href = "play.html";
     } else {
