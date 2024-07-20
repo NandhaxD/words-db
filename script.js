@@ -6,6 +6,19 @@ function redirectToPlay() {
    window.location.href = "play.html";
 }
 
+function wordcheck() {
+    let word = document.getElementById('random_word').textContent.split(":")[1].trim();
+    let answer = document.getElementById('answer').value.trim();
+    if ( word == answer ) {
+         alert("You guess it the word congratulations!")
+          }
+    else {
+         alert("Better luck next time!")
+    }
+       
+    
+
+
 function getRandomWord() {
   fetch('words.json')
    .then(response => response.json())
@@ -15,7 +28,7 @@ function getRandomWord() {
     })
    .then(randomWord => {
       const wordElement = document.getElementById("random_word");
-      wordElement.textContent = `Random word: ${randomWord}`;
+      wordElement.textContent = `Guess: ${randomWord}`;
     })
    .catch(error => console.error('Error:', error));
 }
