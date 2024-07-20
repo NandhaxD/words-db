@@ -1,0 +1,115 @@
+<html>
+<head>
+  <title>Word Guessing Game!</title>
+  <style>
+    body {
+      font-family: Times new roman, serif;
+      background-color: #f0f0f0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header img {
+      width: 250px;
+      height: 180px;
+      margin: 20px auto;
+      display: block;
+    }
+    .rules {
+      margin-bottom: 40px;
+    }
+    .rules p {
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .rules h5 {
+      color: #333;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .game-info {
+      margin-bottom: 40px;
+    }
+    .game-info b {
+      color: #333;
+      font-size: 20px;
+    }
+    .tips {
+      margin-bottom: 40px;
+    }
+    .tips ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .tips li {
+      margin-bottom: 10px;
+    }
+    .tips li:before {
+      content: "\2022";
+      color: #666;
+      font-size: 18px;
+      margin-right: 10px;
+    }
+    .start-game {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .start-game button {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .start-game button:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <img id="welcome" src="https://graph.org/file/2f1b30f91397f551682ff.jpg" alt="Welcome Image">
+      <h1>Word Guessing Game!</h1>
+    </div>
+    <div class="rules">
+      <p>1. Read the Shuffled Word: Carefully read the shuffled word displayed on the screen. For example, "apple" might be shuffled to "alepp".</p>
+      <p>2. Assemble the Correct Word: Think carefully and try to unscramble the letters to form a correct English word.</p>
+      <p>3. Enter Your Answer: Type your answer in the input box provided.</p>
+      <p>4. Check Your Answer: If your answer is correct, you win! If not, you'll lose one life heart.</p>
+    </div>
+    <div class="game-info">
+      <h5><b>Lives</b>: You start with 3 life hearts. Each time you enter an incorrect answer, you'll lose one life heart. If you lose all 3 life hearts, the game is over.</h5>
+      <p><b>Game Over</b>: If you lose all 3 life hearts, the game will end, and you'll need to start over.</p>
+    </div>
+    <div class="tips">
+      <h5><b>Tips</b>:</h5>
+      <ul>
+        <li>Take your time to read the shuffled word carefully.</li>
+        <li>Think logically and try to identify common letter patterns.</li>
+        <li>Don't be afraid to take a guess, but make sure you're confident in your answer!</li>
+      </ul>
+    </div>
+    <div class="start-game">
+      <button onclick="redirectToPlay()">Are You Ready to Play?</button>  
+      <p>Let's get started!</p>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+  
+</body>
+</html
