@@ -35,16 +35,19 @@ function wordcheck() {
 
   if ( word.toLowerCase() == answer.toLowerCase() ) {
       alert("You guessed the word! Congratulations!");
+      answerElement.value = ""; // for clear input()
       getRandomWord();
   } else {
     if (heartsCount <= 0) {
       alert("You lost the game 😂");
       window.location.href = "play.html";
       
+      
     } else {
       heartsCount -= 1;
       heartElement.textContent = "hearts: " + "❤️".repeat(heartsCount);
       alert("You lost ❤️ heart! Better luck next time!");
+      answerElement.value = "";
       getRandomWord();
     }
   }
