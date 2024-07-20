@@ -5,44 +5,67 @@
     body {
   font-family: Times new roman, serif;
   background-image: url('https://graph.org/file/f33270a57e88e0115a05d.jpg');
-  background-position: center; /* add this to center the image */
-    }
-   .container {
-      max-width: 500px;
-      margin: 50px auto;
-      padding: 60px;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-   .random h1 {
-      font-family: Times new roman, serif;
-    }
-   .random img {
-      width: 250px;
-      height: 180px;
-      margin: 35px auto;
-      display: block;
-    }
-   .box input {
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      width: 200px;
-    }
-   .box button {
-      font-family: Times new roman, serif;
-      background-color: #4CAF50;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      margin-top: 10px; /* Add this line to move the button down */
-    }
-  </style>
+  background-position: center;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 60px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 400px; /* Add a fixed height to the container */
+}
+
+.random {
+  height: 100%; /* Make the random div take the full height of the container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.random img {
+  width: 250px;
+  height: 180px;
+  margin: 35px auto;
+  display: block;
+}
+
+.random h1 {
+  font-family: Times new roman, serif;
+  margin-bottom: 20px; /* Add some space between the image and the input field */
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  height: 40px; /* Add a fixed height to the input field */
+}
+
+.box button {
+  font-family: Times new roman, serif;
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px; /* Add some space between the input field and the button */
+  height: 40px; /* Add a fixed height to the button */
+}
+</style>
 </head>
 
 <body>
