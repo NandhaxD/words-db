@@ -3,6 +3,12 @@ function redirectToPlay() {
 }
 
 
+if (document.URL.indexOf("play.html") !== -1) {
+  document.addEventListener("DOMContentLoaded", function() {
+    getRandomWord();
+  });
+}
+
 function getRandomWord() {
   fetch('words.json')
    .then(response => response.json())
