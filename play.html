@@ -30,6 +30,15 @@
       border: 1px solid #ccc;
       border-radius: 5px;
       width: 200px;
+}.box button {
+     font-family: Times new roman, serif;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px; /* Add this line to move the button down */
 }
   
 </style>
@@ -38,12 +47,14 @@
 <body>
   <div class="container">
     <div class="random">
-      <img id="welcome" src="https://graph.org/file/c5483e5603b25821afa39.jpg" alt="random start Image">
+      <img src="https://graph.org/file/c5483e5603b25821afa39.jpg" alt="random game start Image">
       
       <h1 id="random_word">Guess: </h1>
+      
    <div class="box">
-     
      <input id="answer", placeholder="Enter correct word...">
+     <button onclick="checkword()">Check</button>
+       
    </div>
     </div>
   </div>
