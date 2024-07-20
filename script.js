@@ -18,16 +18,19 @@ function wordcheck() {
   const heartMatch = heartElement.textContent.split(":")[1].trim().match(/❤️/g);
   let heartsCount = heartMatch ? heartMatch.length : 0;
 
-  if (word.toLowerCase() === answer.toLowerCase()) {
+  if ( word.toLowerCase() == answer.toLowerCase() ) {
       alert("You guessed the word! Congratulations!");
+      getRandomWord();
   } else {
     if (heartsCount == 0) {
       alert("You lost the game 😂");
       window.location.href = "play.html";
+      
     } else {
       heartsCount -= 1;
       heartElement.textContent = "hearts: " + "❤️".repeat(heartsCount);
       alert("You lost ❤️ heart! Better luck next time!");
+      getRandomWord();
     }
   }
 }
