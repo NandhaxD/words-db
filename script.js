@@ -19,23 +19,20 @@ function wordcheck() {
   let heartsCount = heartMatch ? heartMatch.length : 0;
 
   if (word.toLowerCase() === answer.toLowerCase()) {
-    displayMessage("You guessed the word! Congratulations!");
+      alert("You guessed the word! Congratulations!");
   } else {
     if (heartsCount === 0) {
-      displayMessage("You lost the game 😂");
+      alert("You lost the game 😂");
       window.location.href = "play.html";
     } else {
       heartsCount -= 1;
       heartElement.textContent = "hearts: " + "❤️".repeat(heartsCount);
-      displayMessage("You lost ❤️ heart! Better luck next time!");
+      alert("You lost ❤️ heart! Better luck next time!");
     }
   }
 }
 
-function displayMessage(message) {
-  // Use an HTML element to display the message
-  alert(message);
-}
+
 
 
 
