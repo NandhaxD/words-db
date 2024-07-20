@@ -34,8 +34,7 @@ function wordcheck() {
 
 function displayMessage(message) {
   // Use an HTML element to display the message
-  const messageElement = document.getElementById("message");
-  messageElement.textContent = message;
+  alert(message);
 }
 
 
