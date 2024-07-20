@@ -3,8 +3,8 @@ function redirectToPlay() {
 }
 
 function wordcheck() {
-  let word = document.getElementById('random_word').textContent.split(":")[1].trim();
-  let answer = document.getElementById('answer').value.trim();
+  var word = document.getElementById("random_word").textContent.split(":")[1].trim();
+  var answer = document.getElementById("answer").value.trim();
   if (word == answer) {
     alert("You guessed the word! Congratulations!");
   } else {
@@ -21,7 +21,7 @@ function getRandomWord() {
     })
    .then(randomWord => {
       const wordElement = document.getElementById("random_word");
-      wordElement.textContent = `Guess: ${randomWord}`;
+      wordElement.textContent = `Guess: ${randomWord.word}`; // Access the 'word' property
     })
-   .catch(error => console.error('Error:', error));
+   .catch(error => console.error("Error:", error));
 }
