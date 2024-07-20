@@ -1,23 +1,16 @@
-
-
-
-
 function redirectToPlay() {
-   window.location.href = "play.html";
+  window.location.href = "play.html";
 }
 
 function wordcheck() {
-    let word = document.getElementById('random_word').textContent.split(":")[1].trim();
-    let answer = document.getElementById('answer').value.trim();
-    if ( word == answer ) {
-         alert("You guess it the word congratulations!")
-          }
-    else {
-         alert("Better luck next time!")
-    }
-       
-    
-
+  let word = document.getElementById('random_word').textContent.split(":")[1].trim();
+  let answer = document.getElementById('answer').value.trim();
+  if (word == answer) {
+    alert("You guessed the word! Congratulations!");
+  } else {
+    alert("Better luck next time!");
+  }
+}
 
 function getRandomWord() {
   fetch('words.json')
@@ -32,4 +25,3 @@ function getRandomWord() {
     })
    .catch(error => console.error('Error:', error));
 }
-
