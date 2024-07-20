@@ -11,14 +11,26 @@
    }.container {
       max-width: 1000px;
       margin: 50px auto;
-      padding: 30px;
+      padding: 50px;
       background-color: #fff;
       border: 1px solid #ddd;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }.random h1 {
         font-family: Times new roman, serif;
-   }
+   }.random img {
+      width: 250px;
+      height: 180px;
+      margin: 20px auto;
+      display: block;
+   
+   }.box input {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+}
   
 </style>
 </head>
@@ -26,7 +38,13 @@
 <body>
   <div class="container">
     <div class="random">
-      <h1 id="random_word">Random word: </h1>
+      <img id="welcome" src="https://graph.org/file/c5483e5603b25821afa39.jpg" alt="random start Image">
+      
+      <h1 id="random_word">Guess: </h1>
+   <div class="box">
+     
+     <input id="answer", placeholder="Enter correct word...">
+   </div>
     </div>
   </div>
   <script src="script.js"></script>
@@ -37,4 +55,4 @@
   </script>
   
 </body>
-</ht
+</html>
